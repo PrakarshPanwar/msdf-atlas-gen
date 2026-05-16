@@ -1,4 +1,4 @@
-# MSDF atlas gen Subdirectory
+# MSDF Atlas Gen Subdirectory
 file(GLOB_RECURSE MSDF_LIB_SOURCES
 		CONFIGURE_DEPENDS
 		${CMAKE_CURRENT_SOURCE_DIR}/msdf-atlas-gen/*.cpp
@@ -6,13 +6,13 @@ file(GLOB_RECURSE MSDF_LIB_SOURCES
 		${CMAKE_CURRENT_SOURCE_DIR}/msdf-atlas-gen/*.h
 	)
 
-# Add MSDF gen library
+# Add MSDF Gen
 add_subdirectory(msdfgen)
 
 # Create library
 add_library(msdf-atlas-gen ${MSDF_LIB_SOURCES})
 
-# Linking MSDF gen
+# Link MSDF Gen library
 target_link_libraries(msdf-atlas-gen
 		msdfgen
 	)
